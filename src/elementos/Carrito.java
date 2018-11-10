@@ -30,7 +30,7 @@ public class Carrito{
             int posicionProducto,numeroElementosAnt,numeroElementosDes;
             posicionProducto = this.producto.indexOf(producto);
             numeroElementosAnt = this.numeroElementos.get(posicionProducto);
-            numeroElementosDes = numeroElementosAlm + numeroElementos;
+            numeroElementosDes = numeroElementosAnt + numeroElementos;
             this.numeroElementos.set(posicionProducto,numeroElementosDes);
         }
         else{
