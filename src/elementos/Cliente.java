@@ -11,7 +11,7 @@ public class Cliente{
         this.nombre = nombre;
         this.contrasenia = contrasenia;
         this.carrito = new Carrito();
-        this.cuentaActiva = True;
+        this.cuentaActiva = true;
         this.intentosRestantes = INTENTOS_POSIBLES;
     }
     public String getNombre(){
@@ -31,10 +31,10 @@ public class Cliente{
     }
     public boolean validarCuentaActiva(){
         if(this.intentosRestantes>0)
-            return True;
+            return true;
         else{
-            this.cuentaActiva = False;
-            return False;
+            this.cuentaActiva = false;
+            return false;
         }
     }
     public void restarIntentos(){
