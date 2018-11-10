@@ -12,7 +12,7 @@ public class Producto{
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
-        this.imagen = DIRECCION_IMAGENES + direccionImagen;
+        this.direccionImagen = DIRECCION_IMAGENES + direccionImagen;
     }
     
     public String getNombre(){
