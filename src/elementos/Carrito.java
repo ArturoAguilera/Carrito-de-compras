@@ -6,12 +6,24 @@ public class Carrito{
     private final static float PORCENTAJE_IMPUESTOS = 0.15;
     private ArrayList<Producto> producto;
     private ArrayList<int> numeroElementos;
-    private float subTotal;
-    private 
+    private float subtotal;
+    private float total;
+    private float impuestos;
     public Carrito(){
         this.producto = new ArrayList<Producto>();
         this.numeroElementos = new ArrayList<int>();
-        this.subTotal = 0.00;
+        this.subtotal = 0.00;
+        this.total = 0.00;
+        this.impuestos = 0.00;
+    }
+    public void getSubtotal(){
+        return this.subtotal;
+    }
+    public void getTotal(){
+        return this.total;
+    }
+    public void getImpuestos(){
+        return this.umpuestos;
     }
     public void agregarProducto(Producto productoAgregado, int numeroElementos){
         if (this.producto.contains(productoAgregado){
@@ -32,11 +44,14 @@ public class Carrito{
         this.producto.remove(producto);
         this.numeroElementos.remove(posicionProducto);
     }
-    public void sumarSubTotal(){
+    public void sumarSubtotal(){
         int i ;
         for(i=0;i<this.producto.size();i++){
-        
+            this.subtotal = this.subtotal + (this.producto.get(i).getPrecio() * this.numeroElementos.get(i));
         }
     }
-
+    public void calcularTotal(){
+        this.impuestos = this.subtotal * PORCENTAJE_IMPUESTOS;
+        this.total = this.subtotal + this.impuestos;
+    }
 }
