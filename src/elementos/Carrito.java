@@ -3,12 +3,12 @@ package elementos;
 import java.util.ArrayList;
 
 public class Carrito{
-    private final static float PORCENTAJE_IMPUESTOS = 0.15;
+    private final static double PORCENTAJE_IMPUESTOS = 0.15;
     private ArrayList<Producto> producto;
     private ArrayList<int> numeroElementos;
-    private float subtotal;
-    private float total;
-    private float impuestos;
+    private double subtotal;
+    private double total;
+    private double impuestos;
     public Carrito(){
         this.producto = new ArrayList<Producto>();
         this.numeroElementos = new ArrayList<int>();
@@ -16,17 +16,17 @@ public class Carrito{
         this.total = 0.00;
         this.impuestos = 0.00;
     }
-    public void getSubtotal(){
+    public double getSubtotal(){
         return this.subtotal;
     }
-    public void getTotal(){
+    public double getTotal(){
         return this.total;
     }
-    public void getImpuestos(){
-        return this.umpuestos;
+    public double getImpuestos(){
+        return this.impuestos;
     }
     public void agregarProducto(Producto productoAgregado, int numeroElementos){
-        if (this.producto.contains(productoAgregado){
+        if (this.producto.contains(productoAgregado)){
             int posicionProducto,numeroElementosAnt,numeroElementosDes;
             posicionProducto = this.producto.indexOf(producto);
             numeroElementosAnt = this.numeroElementos.get(posicionProducto);
